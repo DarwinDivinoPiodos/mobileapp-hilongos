@@ -1,0 +1,15 @@
+Download Node.js®20.9.0 LTS
+npx create-expo-app mobile_app_hilongos
+npm install -g expo-cli
+npm install @reduxjs/toolkit
+npm install react-redux 
+npm i tailwind-react-native-classnames
+npm i react-native-safe-area-context
+npm install @react-navigation/native
+npm i react-native-screens
+npm i @react-navigation/stack
+npm i react-native-gesture-handler
+npm install @rneui/themed @rneui/base
+npm i react-native-google-places-autocomplete
+npm i react-native-reanimated
+npm i @react-native-community/masked-view
