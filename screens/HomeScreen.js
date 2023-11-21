@@ -1,13 +1,20 @@
 import React from "react";
-import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  Button,
+} from "react-native";
 import tw from "tailwind-react-native-classnames";
 import NavOptions from "../components/navOptions";
-// import { useDispatch } from "react-redux";
-// import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
-// import { useDispatch } from "react-redux";
-// import { setDestination, setOrigin } from "../slices/navSlice";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import { useDispatch } from "react-redux";
+import { setDestination, setOrigin } from "../slices/navSlice";
+import { GOOGLE_MAPS_APIKEY } from "@env";
 const HomeScreen = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View style={tw`p-5`}>
@@ -15,7 +22,7 @@ const HomeScreen = () => {
           source={require("../assets/uberLogo.png")}
           style={styles.imageLogo}
         />
-        {/* <GooglePlacesAutocomplete
+        <GooglePlacesAutocomplete
           styles={{
             container: {
               flex: 0,
@@ -28,7 +35,7 @@ const HomeScreen = () => {
             dispatch(
               setOrigin({
                 location: details.geometry.location,
-                descripttion: data.description,
+                description: data.description,
               })
             );
             dispatch(setDestination(null));
@@ -43,9 +50,18 @@ const HomeScreen = () => {
           placeholder="Where From?"
           nearbyPlacesAPI="GooglePlaceSearch"
           debounce={400}
-        /> */}
+        />
 
         <NavOptions />
+        {/* <View>
+          <Button
+            title="Click Me"
+            onPress={(data, details = null) => {
+              console.log(data);
+              console.log(details);
+            }}
+          />
+        </View> */}
       </View>
     </SafeAreaView>
   );

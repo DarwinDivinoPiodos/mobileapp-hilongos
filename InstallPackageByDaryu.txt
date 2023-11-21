@@ -13,3 +13,7 @@ npm install @rneui/themed @rneui/base
 npm i react-native-google-places-autocomplete
 npm i react-native-reanimated
 npm i @react-native-community/masked-view
+npm i react-native-dotenv
+npm i react-native-maps
+
+https://console.cloud.google.com/home/dashboard?project=hilongos-connect-mobile&authuser=3&hl=en
