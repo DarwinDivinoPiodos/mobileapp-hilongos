@@ -23,6 +23,7 @@ const HomeScreen = () => {
           style={styles.imageLogo}
         />
         <GooglePlacesAutocomplete
+          placeholder="Where From?"
           styles={{
             container: {
               flex: 0,
@@ -40,28 +41,23 @@ const HomeScreen = () => {
             );
             dispatch(setDestination(null));
           }}
+          // onPress={(data, details = null) => {
+          //   console.log(data);
+          //   console.log(details);
+          // }}
           fetchDetails={true}
+          returnKeyType={"search"}
           enablePoweredByContainer={false}
           minLength={2}
           query={{
             key: GOOGLE_MAPS_APIKEY,
             language: "en",
           }}
-          placeholder="Where From?"
           nearbyPlacesAPI="GooglePlaceSearch"
           debounce={400}
         />
 
         <NavOptions />
-        {/* <View>
-          <Button
-            title="Click Me"
-            onPress={(data, details = null) => {
-              console.log(data);
-              console.log(details);
-            }}
-          />
-        </View> */}
       </View>
     </SafeAreaView>
   );
