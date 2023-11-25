@@ -15,5 +15,5 @@ npm i react-native-reanimated
 npm i @react-native-community/masked-view
 npm i react-native-dotenv
 npm i react-native-maps
-
+npm i react-native-maps-directions
 https://console.cloud.google.com/home/dashboard?project=hilongos-connect-mobile&authuser=3&hl=en
